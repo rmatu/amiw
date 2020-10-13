@@ -1,0 +1,56 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+#wrapper {
+  height: 468px;
+  width: 200px;
+}
+
+#avatar {
+  position: relative;
+}
+
+#avatar-base {
+  background: url('/images/sim.png');
+  position: absolute;
+  height: 468px;
+  width: 200px;
+}
+
+#avatar-glasses {
+  background: url('/images/glasses.png');
+  position: absolute;
+  height: 468px;
+  width: 200px;
+}
+
+#avatar-hair {
+  background: url('/images/hair.png');
+  position: absolute;
+  height: 468px;
+  width: 200px;
+}
+
+#avatar-shirt {
+  background: url('/images/shirt.png');
+  position: absolute;
+  height: 468px;
+  width: 200px;
+}
+
+#avatar-trousers {
+  background: url('/images/trousers.png');
+  position: absolute;
+  height: 468px;
+  width: 200px;
+}
+
+#options {
+  margin-left: 4rem;
+}
