@@ -1,0 +1,9 @@
+.chart {
+  max-width: 800px;
+  max-height: 200px;
+}
+
+#myChart {
+  max-width: 100%;
+  max-height: 100%;
+}
