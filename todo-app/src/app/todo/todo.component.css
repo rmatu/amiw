@@ -1,0 +1,58 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 0.4em;
+  margin: 0.2em 0;
+}
+
+.btn {
+  padding: 0.4em;
+  border-radius: 0.4em;
+  font-weight: 700;
+  min-width: 4em;
+}
+
+.delete-btn {
+  background-color: #c82333;
+  color: white;
+}
+
+.done-btn {
+  background-color: #218838;
+  margin-right: 0.5em;
+  color: white;
+}
+
+.add-btn {
+  background-color: #218838;
+  margin-right: 0.5em;
+  color: white;
+  font-weight: 700;
+}
+
+.clear-btn {
+  background-color: #c82333;
+  color: white;
+}
+
+.done {
+  text-decoration: line-through;
+
+  opacity: 60%;
+}
+
+.text {
+  margin: 0;
+  margin-left: 0.4em;
+  font-size: 1.4em;
+}
+
+.date {
+  margin: 0;
+  margin-left: 0.4em;
+  font-size: 1.3em;
+  color: #777;
+}

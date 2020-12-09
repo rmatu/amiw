@@ -1,0 +1,14 @@
+<div class="todo" #todoItem>
+  <div>
+    <p class="text">{{ todo.text }}</p>
+    <p class="date">{{ todo.date | date }}</p>
+  </div>
+  <div>
+    <button (click)="onDone(todo.id, todoItem)" class="done-btn btn">
+      Done
+    </button>
+
+    <!-- ! NOT WORKING -->
+    <button (click)="onDelete(todo.id)" class="delete-btn btn">Delete</button>
+  </div>
+</div>

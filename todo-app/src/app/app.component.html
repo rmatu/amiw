@@ -11,21 +11,14 @@
     <div class="utility-btns">
       <button class="add-btn btn" (click)="onAdd(in.value)">Add</button>
       <button class="clear-btn btn" (click)="onClear()">Clear</button>
+
+      <!-- ! NOT WORKING -->
+      <!-- <button class="clear-btn btn" (click)="onDeleteDone()">Clear done</button> -->
     </div>
 
     <ul>
-      <li *ngFor="let el of list">
-        <div class="todo" #todoItem>
-          <p class="text">{{ el.text }}</p>
-          <div>
-            <button (click)="onDone(el.id, todoItem)" class="done-btn btn">
-              Done
-            </button>
-            <button (click)="onDelete(el.id)" class="delete-btn btn">
-              Delete
-            </button>
-          </div>
-        </div>
+      <li *ngFor="let todo of list">
+        <todo [todo]="todo"></todo>
       </li>
     </ul>
   </div>

@@ -1,9 +1,12 @@
+import { TodoService } from './todo.service';
 import { Component, ViewChild } from '@angular/core';
+import { Moment } from 'moment';
 
-interface Todo {
+export interface Todo {
   done: boolean;
   text: string;
   id: number;
+  date: Moment;
 }
 
 @Component({
@@ -13,34 +16,29 @@ interface Todo {
 })
 export class AppComponent {
   public list: Todo[] = [];
-  private id = 1;
+
   @ViewChild('in') in;
 
+  constructor(private todoService: TodoService) {}
+
+  ngOnInit() {
+    this.todoService.getTodos().subscribe((todos) => {
+      this.list = todos;
+    });
+  }
+
   onAdd(text: string) {
-    if (text === '') return;
-    this.list.push({ done: false, text, id: this.id });
-    this.in.nativeElement.value = null;
-    this.id++;
-    console.log(this.list);
-  }
-
-  onDelete(id) {
-    const newList = this.list.filter((el) => el.id !== id);
-    this.list = newList;
-  }
-
-  onDone(id, todoItem) {
-    const idx = this.list.findIndex((el) => el.id === id);
-    this.list[idx].done = !this.list[idx].done;
-
-    if (this.list[idx].done === true) {
-      todoItem.classList.add('done');
-    } else {
-      todoItem.classList.remove('done');
-    }
+    this.in.nativeElement.value = '';
+    this.todoService.addTodo(text);
   }
 
   onClear() {
-    this.list = [];
+    this.todoService.clearTodos();
+  }
+
+  // ! NOT WORKING
+
+  onDeleteDone() {
+    this.todoService.deleteDoneTodos();
   }
 }
