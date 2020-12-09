@@ -18,12 +18,16 @@
 .delete-btn {
   background-color: #c82333;
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .done-btn {
   background-color: #218838;
   margin-right: 0.5em;
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 00;
 }
 
 .add-btn {
@@ -55,4 +59,12 @@
   margin-left: 0.4em;
   font-size: 1.3em;
   color: #777;
+}
+
+.ut-btns {
+  margin-right: 0.2em;
+}
+
+.text-field {
+  max-width: 65%;
 }

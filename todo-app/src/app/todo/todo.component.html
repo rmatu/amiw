@@ -1,14 +1,12 @@
 <div class="todo" #todoItem>
-  <div>
+  <div class="text-field">
     <p class="text">{{ todo.text }}</p>
-    <p class="date">{{ todo.date | date }}</p>
+    <p class="date">{{ todo.date | mydate }}</p>
   </div>
-  <div>
+  <div class="ut-btns">
     <button (click)="onDone(todo.id, todoItem)" class="done-btn btn">
       Done
     </button>
-
-    <!-- ! NOT WORKING -->
     <button (click)="onDelete(todo.id)" class="delete-btn btn">Delete</button>
   </div>
 </div>

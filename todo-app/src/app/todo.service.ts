@@ -12,7 +12,6 @@ export class TodoService {
 
   constructor() {
     this.serviceTodos = this.checkTodos();
-    console.log(this.serviceTodos);
   }
 
   getTodos() {
@@ -22,6 +21,7 @@ export class TodoService {
   addTodo(text: string) {
     if (text === '') return;
     const date = moment();
+
     console.log(date);
     this.serviceTodos.push({ text, done: false, id: this.id, date });
     this.id++;
@@ -54,6 +54,16 @@ export class TodoService {
     }
   }
 
+  deleteTodo(id) {
+    let idx = this.serviceTodos
+      .map((item) => {
+        return item.id;
+      })
+      .indexOf(id);
+    this.serviceTodos.splice(idx, 1);
+    this.setLocalTodos();
+  }
+
   setLocalTodos() {
     localStorage.setItem('todos', JSON.stringify(this.serviceTodos));
   }
@@ -64,10 +74,5 @@ export class TodoService {
     console.log(this.serviceTodos);
     this.serviceTodos = [...newList];
     console.log(this.serviceTodos);
-  }
-
-  deleteTodo(id) {
-    const newList = this.serviceTodos.filter((el) => el.id !== id);
-    this.serviceTodos = newList;
   }
 }
