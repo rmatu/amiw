@@ -1,4 +1,3 @@
-import { Joke } from './../components/joke/joke.component';
 import { Component, OnInit } from '@angular/core';
 import { JokesService } from '../jokes.service';
 @Component({
@@ -7,14 +6,14 @@ import { JokesService } from '../jokes.service';
   styleUrls: ['./programing-joke.component.scss'],
 })
 export class ProgramingJokeComponent implements OnInit {
-  public programmingJokesList: Joke[];
+  public programmingJoke;
 
   constructor(private jokesService: JokesService) {}
 
   ngOnInit(): void {
-    this.jokesService.apiTenProgramingJokes().subscribe((data: any) => {
-      console.log('random', data);
-      this.programmingJokesList = data;
+    this.jokesService.apiProgramingJoke().subscribe((data: any) => {
+      console.log('programing', data);
+      this.programmingJoke = data[0];
     });
   }
 }

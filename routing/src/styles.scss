@@ -5,7 +5,10 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
-h2,
+h2 {
+  text-transform: capitalize;
+}
+
 h3 {
   color: #444;
   font-family: Arial, Helvetica, sans-serif;

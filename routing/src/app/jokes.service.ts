@@ -16,9 +16,9 @@ export class JokesService {
     return this.http.get(`https://official-joke-api.appspot.com/random_joke`);
   }
 
-  apiTenProgramingJokes() {
+  apiProgramingJoke() {
     return this.http.get(
-      `https://official-joke-api.appspot.com/jokes/programming/ten`
+      `https://official-joke-api.appspot.com/jokes/programming/random`
     );
   }
 }
