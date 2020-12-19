@@ -15,5 +15,6 @@ export class JokeOfTheDayComponent implements OnInit {
     this.jokesService.apiJokeOfTheDay().subscribe((data: any) => {
       this.jokeOfTheDay = data.contents.jokes[0];
     });
+    console.warn(this.jokeOfTheDay);
   }
 }

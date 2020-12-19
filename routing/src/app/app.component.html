@@ -3,13 +3,18 @@
 </div>
 <div style="text-align: center">
   <nav>
+    <a
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home</a
+    >
     <a routerLink="/joke-of-the-day" routerLinkActive="active">
       Joke of the day
     </a>
     <a routerLink="/random-joke" routerLinkActive="active"> Random joke </a>
-    <a routerLink="/programming" routerLinkActive="active">
-      Programming jokes</a
-    >
+    <a routerLink="/programming" routerLinkActive="active"> Programming joke</a>
   </nav>
 </div>
 <div style="margin-top: 7em; text-align: center">
