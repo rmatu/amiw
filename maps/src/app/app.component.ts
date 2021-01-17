@@ -86,7 +86,7 @@ export class AppComponent {
     <p><span style="font-weight: 700">Country Name:</span> ${country_name}</p>
     <p><span style="font-weight: 700">Region Name:</span> ${region_name}</p>
     <p><span style="font-weight: 700">City:</span> ${city}</p>
-    <p><span style="font-weight: 700">Flag:</span> <img style="width: 15px; height: 15px" src="${country_flag}"></p>
+    <p><span style="font-weight: 700">Flag:</span> <img style="width: 30px; height: 15px" src="${country_flag}"></p>
         `;
     popup.setPosition(webMe);
 
