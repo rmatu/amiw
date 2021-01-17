@@ -1,11 +1,14 @@
-<input
-  class="input"
-  (keyup.enter)="onEnter($event.target.value)"
-  #in
-  type="text"
-/>
+<div class="header">
+  <h1>Type IP address</h1>
+  <input
+    class="input"
+    (keyup.enter)="onEnter($event.target.value)"
+    #in
+    type="text"
+  />
+</div>
 <div id="map" class="map"></div>
 <div id="popup" class="ol-popup">
   <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-  <div id="popup-content"></div>
+  <div id="popup-content" #popup></div>
 </div>

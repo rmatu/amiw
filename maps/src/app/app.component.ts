@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { API_KEY } from 'env';
 import { Map, View } from 'ol';
 import { Tile as TileLayer } from 'ol/layer';
@@ -14,10 +14,12 @@ import { validateIPaddress } from '../utils';
 })
 export class AppComponent {
   public map;
+
   constructor() {}
 
   ngOnInit() {
     const container = document.getElementById('popup');
+    const content = document.getElementById('popup-content');
 
     const overlay = new Overlay({
       element: container,
@@ -33,6 +35,7 @@ export class AppComponent {
           source: new OSM(),
         }),
       ],
+      overlays: [overlay],
       target: 'map',
       view: new View({
         center: [0, 0],
@@ -41,13 +44,13 @@ export class AppComponent {
     });
   }
 
+  // 93.131.131.42
   async onEnter(IP) {
     if (!validateIPaddress(IP)) {
       return;
     }
-    console.log('here');
-    const closer = document.getElementById('popup-closer');
     const container = document.getElementById('popup');
+    const closer = document.getElementById('popup-closer');
     const content = document.getElementById('popup-content');
 
     const popup = new Overlay({
@@ -69,17 +72,21 @@ export class AppComponent {
       continent_name,
       country_name,
       region_name,
+      location: { country_flag },
       city,
     } = data;
     this.map.addOverlay(popup);
     const me = [longitude, latitude];
     const webMe = fromLonLat(me);
     const hdms = toStringHDMS(toLonLat(webMe));
-    content.innerHTML = `<p>Cooridnates: ${hdms}</p>
-        <p>Continent Name: ${continent_name}</p>
-        <p>Country Name: ${country_name}</p>
-        <p>Region Name: ${region_name}</p>
-        <p>City: ${city}</p>
+    // Niestety, żadne style nie chciały ze mną współpracować w pliku app.component.sccs,
+    // więc musiałem wystylizować elementy tutaj...
+    content.innerHTML = `<p><span style="font-weight: 700">Cooridnates:</span> ${hdms}</p>
+    <p><span style="font-weight: 700">Continent Name:</span> ${continent_name}</p>
+    <p><span style="font-weight: 700">Country Name:</span> ${country_name}</p>
+    <p><span style="font-weight: 700">Region Name:</span> ${region_name}</p>
+    <p><span style="font-weight: 700">City:</span> ${city}</p>
+    <p><span style="font-weight: 700">Flag:</span> <img style="width: 15px; height: 15px" src="${country_flag}"></p>
         `;
     popup.setPosition(webMe);
 

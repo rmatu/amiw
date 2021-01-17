@@ -1,8 +1,3 @@
-.map {
-  height: 100vh;
-  width: 100vw;
-}
-
 .ol-popup {
   position: absolute;
   background-color: white;
@@ -42,20 +37,41 @@
 .ol-popup-closer {
   text-decoration: none;
   position: absolute;
-  top: 2px;
+  top: 4px;
   right: 8px;
 }
 .ol-popup-closer:after {
   content: "✖";
 }
 
-.popup-content {
-  p {
-    font-weight: bold;
-  }
+.map {
+  height: calc(100vh - 3em);
+  width: 100%;
 }
 
-.map {
-  height: 100vh;
+.header {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 3em;
   width: 100%;
+  background: #4ecdc4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #556270,
+    #4ecdc4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #556270,
+    #4ecdc4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+
+  input {
+    margin-top: 0.2em;
+  }
 }
