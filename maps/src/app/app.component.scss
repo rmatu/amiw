@@ -57,18 +57,21 @@
   flex-direction: column;
   height: 3em;
   width: 100%;
-  background: #4ecdc4; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #556270,
+  background-image: linear-gradient(
+    to left,
+    #4ecdc4,
+    #48b8be,
+    #4ba4b3,
+    #528fa3,
+    #567b8f,
+    #567b8f,
+    #567b8f,
+    #567b8f,
+    #528fa3,
+    #4ba4b3,
+    #48b8be,
     #4ecdc4
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #556270,
-    #4ecdc4
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  );
   color: white;
 
   input {
