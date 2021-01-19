@@ -44,7 +44,6 @@ export class AppComponent {
     });
   }
 
-  // 93.131.131.42
   async onEnter(IP) {
     if (!validateIPaddress(IP)) {
       return;
