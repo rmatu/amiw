@@ -1,7 +1,7 @@
 <div class="container">
   <div class="d-flex justify-content-center flex-column">
     <h1 class="display-4 text-center">Why React is better than Angular?</h1>
-    <h1 class="display-5 mt-4">FAQ</h1>
+    <h2 class="display-5 mt-4">FAQ</h2>
     <ngb-accordion #acc="ngbAccordion">
       <ngb-panel id="toggle-1" title="💁 How is React different from Angular?">
         <ng-template ngbPanelContent>
@@ -36,8 +36,8 @@
       </ngb-panel>
     </ngb-accordion>
     <div class="row mt-5 text-center">
-      <div class="col-sm">
-        <h1 class="display-5">Popularity</h1>
+      <div class="col-sm text-left">
+        <h2>Popularity</h2>
         <p>
           Stack Overflow names React.js the most loved and most wanted web
           framework by developers (74.5%). Angular has a lower rate – 57.6% of
@@ -49,9 +49,14 @@
           Angular 2? Well, not that good: 1,609,139 weekly downloads and 10,128
           dependents.
         </p>
+        <p>
+          According to the Stack Overflow survey I’ve just mentioned, more
+          developers said they choose React over Angular: 31.3% of React.js vs.
+          30.7% Angular.
+        </p>
       </div>
       <div class="col-sm">
-        <h1 class="display-5">Bundle size</h1>
+        <h2>Bundle size</h2>
         <p>
           Why does size matter? The smaller is the file, the faster it loads.
           The faster it loads, the higher is the ranking – and, ultimately, the
@@ -68,8 +73,8 @@
           demand.
         </p>
       </div>
-      <div class="col-sm">
-        <h1 class="display-5">Performence</h1>
+      <div class="col-sm text-right">
+        <h2>Performence</h2>
         <p>
           React.js uses virtual DOM (Document Object Model – allows accessing
           and changing document contents, layout, and even structure). While
