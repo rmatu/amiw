@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="d-flex justify-content-center flex-column">
+    <h1 class="display-4 text-center">Why React is better than Angular?</h1>
+    <h1 class="display-5 mt-4">FAQ</h1>
+    <ngb-accordion #acc="ngbAccordion">
+      <ngb-panel id="toggle-1" title="💁 How is React different from Angular?">
+        <ng-template ngbPanelContent>
+          Angular is a full-fledged framework, while React is a library.
+          React.js uses virtual DOM and one-way data binding while Angular
+          operates on real DOM & two-way data binding. There’s also a difference
+          in bundle size (React’s smaller) and speed (React works a bit faster).
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel id="toggle-2" title="💻 Which is better: Angular or React?">
+        <ng-template ngbPanelContent>
+          They're both great for front-end development. We prefer React over
+          Angular because of isolated debugging, which helps us achieve better
+          app's stability. Plus, React is a library, and we can integrate it
+          into any project (even if it is made with Angular).
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel id="toggle-3" title="👍 Why React is better than Angular?">
+        <ng-template ngbPanelContent>
+          React beats Angular in terms of performance, full backward
+          compatibility, and smaller bundle size. The component-driven
+          architecture of React lets devs re-use components, saving development
+          time, and cost.
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel id="toggle-4" title="🔥 Why React is faster than Angular?">
+        <ng-template ngbPanelContent>
+          React.js apps use virtual DOM that allows developers to virtually
+          update changes without rewriting the entire HTML doc. It renders
+          updates faster and ensures faster performance.
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+    <div class="row mt-5 text-center">
+      <div class="col-sm">
+        <h1 class="display-5">Popularity</h1>
+        <p>
+          Stack Overflow names React.js the most loved and most wanted web
+          framework by developers (74.5%). Angular has a lower rate – 57.6% of
+          developers are interested in working with it.
+        </p>
+        <p>
+          NPM counts 53,647 packages depending on React. The number of 8,140,830
+          weekly downloads looks impressive too. That was trending React.
+          Angular 2? Well, not that good: 1,609,139 weekly downloads and 10,128
+          dependents.
+        </p>
+      </div>
+      <div class="col-sm">
+        <h1 class="display-5">Bundle size</h1>
+        <p>
+          Why does size matter? The smaller is the file, the faster it loads.
+          The faster it loads, the higher is the ranking – and, ultimately, the
+          conversion rate (and margin).
+        </p>
+        <p>
+          ReactJS uses webpack (splits your code into smaller parts), tree
+          shaking, and dynamic imports that reduce the bundle size.
+        </p>
+        <p>
+          Tree shaking (or dead-code elimination) means that unused modules
+          won't be included in the bundle during the build process. With dynamic
+          imports, the app loads the code needed initially--and load the rest on
+          demand.
+        </p>
+      </div>
+      <div class="col-sm">
+        <h1 class="display-5">Performence</h1>
+        <p>
+          React.js uses virtual DOM (Document Object Model – allows accessing
+          and changing document contents, layout, and even structure). While
+          Angular 2 operates on real DOM.
+        </p>
+        <p>
+          Imagine you want to update user profile details, let’s say, their last
+          name. Real DOM, instead of changing just that bit of info, updates the
+          entire tree structure of HTML tables until it reaches the needed data.
+          In our case, it's the last name.
+        </p>
+        <p>
+          While virtual DOM allows us to update the changes without rewriting
+          the entire HTML doc virtually. This renders updates much faster and
+          ensures fast performance – no matter of the apps' size.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
