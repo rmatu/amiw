@@ -1,6 +1,8 @@
 <div class="container">
   <div class="d-flex justify-content-center flex-column">
-    <h1 class="display-4 text-center">Why React is better than Angular?</h1>
+    <h1 class="display-4 text-center mt-3">
+      Why React is better than Angular?
+    </h1>
     <h2 class="display-5 mt-4">FAQ</h2>
     <ngb-accordion #acc="ngbAccordion">
       <ngb-panel id="toggle-1" title="💁 How is React different from Angular?">
@@ -13,7 +15,7 @@
       </ngb-panel>
       <ngb-panel id="toggle-2" title="💻 Which is better: Angular or React?">
         <ng-template ngbPanelContent>
-          They're both great for front-end development. We prefer React over
+          They're both great for front-end development. I prefer React over
           Angular because of isolated debugging, which helps us achieve better
           app's stability. Plus, React is a library, and we can integrate it
           into any project (even if it is made with Angular).
@@ -93,5 +95,15 @@
         </p>
       </div>
     </div>
+  </div>
+  <div>
+    <button
+      type="button"
+      class="btn btn-primary col-sm"
+      [autoClose]="'outside'"
+      ngbPopover="⚛️ useReact"
+    >
+      Conclusion
+    </button>
   </div>
 </div>
